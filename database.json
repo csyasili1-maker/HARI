@@ -1,0 +1,403 @@
+{
+  "homepage": {
+    "headline": "Markify Your Brand. Grow Beyond Limits.",
+    "subheadline": "HariMarkify helps businesses grow with SEO, social media marketing, Google Ads, Meta Ads, branding, content strategy, and conversion-focused digital campaigns.",
+    "cta_text_1": "Get Free Consultation",
+    "cta_text_2": "View Our Work",
+    "whatsapp_link": "https://wa.me/919441745745?text=Hi%20HariMarkify%2C%20I%20want%20to%20grow%20my%20business%20with%20digital%20marketing.",
+    "call_link": "tel:+919441745745",
+    "about_title": "About HariMarkify",
+    "about_content": "At HariMarkify, we don’t just run campaigns — we build growth systems. From search visibility to social media presence, from paid ads to brand storytelling, we help businesses become discoverable, memorable, and profitable.\n\nHariMarkify supports startups, local businesses, education brands, healthcare businesses, real estate companies, restaurants, e-commerce brands, service providers, and personal brands with smart digital marketing strategies.",
+    "counters": [
+      {
+        "number": "100+",
+        "label": "Campaigns Planned"
+      },
+      {
+        "number": "50+",
+        "label": "Brands Supported"
+      },
+      {
+        "number": "3X",
+        "label": "SEO + Ads + Branding"
+      },
+      {
+        "number": "100%",
+        "label": "Result-Focused Marketing"
+      },
+      {
+        "number": "24/7",
+        "label": "Local & National Growth Strategy"
+      }
+    ],
+    "why_choose_us": [
+      "Strategy-first marketing approach",
+      "SEO-focused content and website planning",
+      "Creative social media campaigns",
+      "Performance-driven ad campaigns",
+      "Transparent reports",
+      "Local business growth expertise",
+      "Lead-generation focused funnels",
+      "Premium branding and creative direction"
+    ]
+  },
+  "services": [
+    {
+      "id": "search-engine-optimization",
+      "icon": "flaticon-seo",
+      "title": "Search Engine Optimization",
+      "description": "Dominate organic search results with our complete technical, on-page, and off-page SEO system. We perform detailed keyword research, resolve site speed bottle-necks, build high-authority backlinks, and target high-volume phrases to capture ready-to-buy customers.",
+      "cta_text": "Boost Rankings",
+      "cta_link": "/contact-us.html"
+    },
+    {
+      "id": "local-seo-gpb",
+      "icon": "flaticon-placeholder-1",
+      "title": "Local SEO & Google Business Profile",
+      "description": "Rank in Google's Map Pack for 'near me' local queries. We optimize your Google Business Profile (GBP), manage positive reviews, build local citations, implement local business schema, and ensure directory accuracy to drive phone calls and office visits from local buyers.",
+      "cta_text": "Get Listed",
+      "cta_link": "/contact-us.html"
+    },
+    {
+      "id": "social-media-marketing",
+      "icon": "flaticon-megaphone",
+      "title": "Social Media Marketing",
+      "description": "Build an authentic, highly-engaged audience on Instagram, LinkedIn, and Facebook. We design custom content calendars, write compelling copy, produce high-quality reels/carousels, and manage active community interactions to turn followers into loyal advocates.",
+      "cta_text": "Get Social",
+      "cta_link": "/contact-us.html"
+    },
+    {
+      "id": "meta-ads-management",
+      "icon": "flaticon-advertise",
+      "title": "Meta Ads Management",
+      "description": "Convert social media scroll intent into qualified customer inquiries. We design high-converting visual ad creatives, write persuasive copy, build custom conversion funnels, set up tracking APIs, and run targeted Lookalike/A/B campaigns to scale your ROAS.",
+      "cta_text": "Launch Campaign",
+      "cta_link": "/contact-us.html"
+    },
+    {
+      "id": "google-ads-ppc",
+      "icon": "flaticon-analysis",
+      "title": "Google Ads / PPC",
+      "description": "Capture immediate search intent by displaying your brand right when buyers are actively searching for your services. We write high-click-through search ads, build optimized landing pages, map negative keywords, and run responsive display/performance max campaigns.",
+      "cta_text": "Start PPC",
+      "cta_link": "/contact-us.html"
+    },
+    {
+      "id": "content-marketing",
+      "icon": "flaticon-content",
+      "title": "Content Marketing",
+      "description": "Establish authority and build trust with your audience through value-driven content pipelines. We create comprehensive blog posts, target educational search keywords, write landing page copy, and develop resource guides that systematically convert cold traffic.",
+      "cta_text": "Get Content",
+      "cta_link": "/contact-us.html"
+    },
+    {
+      "id": "branding-creative-design",
+      "icon": "flaticon-vector",
+      "title": "Branding & Creative Design",
+      "description": "Define how the market perceives your business. We build complete visual identity systems, from custom logo suites and brand style manuals to custom social media assets and creative ad templates that make your brand immediately memorable.",
+      "cta_text": "Build Brand",
+      "cta_link": "/contact-us.html"
+    },
+    {
+      "id": "website-design-landing-pages",
+      "icon": "flaticon-web-design",
+      "title": "Website Design & Landing Pages",
+      "description": "Turn traffic into sales with custom, fast-loading, mobile-responsive landing pages and websites. We optimize UI/UX flows, write conversion copy, integrate analytics tracking, and design modern, clean pages with smooth animations.",
+      "cta_text": "Build Website",
+      "cta_link": "/contact-us.html"
+    },
+    {
+      "id": "lead-generation-campaigns",
+      "icon": "flaticon-target",
+      "title": "Lead Generation Campaigns",
+      "description": "Fuel your sales pipeline with qualified B2B or B2C leads. We map complete lead acquisition paths, set up custom booking integrations, deploy interactive lead forms, and optimize ad metrics to lower your Cost Per Lead (CPL) continuously.",
+      "cta_text": "Generate Leads",
+      "cta_link": "/contact-us.html"
+    },
+    {
+      "id": "youtube-reels-strategy",
+      "icon": "flaticon-video-camera",
+      "title": "YouTube & Reels Growth Strategy",
+      "description": "Grow your visual footprint using high-engagement short-form video. We plan video concepts, write engaging scripts, optimize titles/descriptions for search engines, and design click-worthy thumbnails to scale your YouTube & Reels visibility.",
+      "cta_text": "Go Viral",
+      "cta_link": "/contact-us.html"
+    },
+    {
+      "id": "online-reputation-management",
+      "icon": "flaticon-shield",
+      "title": "Online Reputation Management",
+      "description": "Protect and enhance your brand's digital trustworthiness. We map reviews, monitor social brand mentions, build campaigns to generate positive customer testimonials, and suppress negative search results to ensure high customer confidence.",
+      "cta_text": "Manage Reputation",
+      "cta_link": "/contact-us.html"
+    },
+    {
+      "id": "marketing-automation",
+      "icon": "flaticon-refresh",
+      "title": "Marketing Automation",
+      "description": "Streamline your client nurturing while saving hours of manual follow-ups. We build custom CRM setups, integrate automated email campaigns, deploy WhatsApp API auto-responders, and connect APIs to nurture and close leads instantly.",
+      "cta_text": "Automate Now",
+      "cta_link": "/contact-us.html"
+    },
+    {
+      "id": "analytics-reporting",
+      "icon": "flaticon-report",
+      "title": "Analytics & Monthly Reporting",
+      "description": "Make strategic marketing decisions based on clear business data. We set up Google Analytics 4, build custom Looker Studio dashboards, map key conversion parameters, and share transparent monthly growth reports with action items.",
+      "cta_text": "See Reports",
+      "cta_link": "/contact-us.html"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "local-restaurant-growth",
+      "client": "Local Restaurant Growth Campaign",
+      "industry": "Food & Restaurant",
+      "service": "Local SEO + Social Media",
+      "challenge": "Low footfall and lack of local visibility on Google Search/Maps.",
+      "strategy": "Optimized Google Business Profile and posted high-engagement Instagram Reels featuring signature dishes.",
+      "result": "3X more enquiries through Google Maps and Instagram.",
+      "metrics_before": "20 map calls / month",
+      "metrics_after": "180+ map calls / month",
+      "category": "Local Business Growth",
+      "thumbnail": "assets/img/generated/portfolio_image.png"
+    },
+    {
+      "id": "real-estate-lead-gen",
+      "client": "Premium Villa Project Leads",
+      "industry": "Real Estate",
+      "service": "Meta Ads + Landing Page",
+      "challenge": "High cost-per-lead (CPL) and low quality from broker-provided lists.",
+      "strategy": "Launched target Meta Ads directed to a custom-designed, fast-loading landing page with virtual tours.",
+      "result": "Reduced cost per lead by 45% and improved qualified enquiries by 3X.",
+      "metrics_before": "CPL ₹1200, 5% qualified",
+      "metrics_after": "CPL ₹650, 22% qualified",
+      "category": "Meta Ads",
+      "thumbnail": "assets/img/generated/hero_image.png"
+    },
+    {
+      "id": "coaching-institute-seo",
+      "client": "IIT-JEE Coaching Institute",
+      "industry": "Education",
+      "service": "SEO + Content Marketing",
+      "challenge": "Relying purely on offline banners; zero organic search ranking.",
+      "strategy": "Conducted high-intent keyword research, built localized blog articles, and earned authoritative local backlinks.",
+      "result": "Improved Google rankings for local course-related keywords to top 3 positions.",
+      "metrics_before": "Rank #50+ for major keywords",
+      "metrics_after": "Rank #1-3 for 12 local keywords",
+      "category": "SEO",
+      "thumbnail": "assets/img/generated/seo_image.png"
+    },
+    {
+      "id": "healthcare-brand-awareness",
+      "client": "Orthopedic & Spine Clinic",
+      "industry": "Healthcare",
+      "service": "Social Media + Reputation Management",
+      "challenge": "Poor review rating on maps and weak visual branding.",
+      "strategy": "Implemented patient review solicitation automation and shared patient recovery video interviews on social media.",
+      "result": "Better trust, stronger content presence, and improved clinic appointments.",
+      "metrics_before": "3.2 Google rating, 15 reviews",
+      "metrics_after": "4.8 Google rating, 350+ reviews",
+      "category": "Social Media",
+      "thumbnail": "assets/img/generated/about_image.png"
+    },
+    {
+      "id": "ecommerce-performance-campaign",
+      "client": "Ethnic Wear E-commerce Brand",
+      "industry": "E-commerce",
+      "service": "Google Ads + Meta Ads",
+      "challenge": "High cart abandonment rate and low Return on Ad Spend (ROAS).",
+      "strategy": "Implemented Meta catalog dynamic ads and Google Shopping ads targeting high-intent buyer audiences.",
+      "result": "Better product visibility and improved sales campaign performance.",
+      "metrics_before": "1.2X ROAS",
+      "metrics_after": "4.1X ROAS",
+      "category": "Google Ads",
+      "thumbnail": "assets/img/generated/services_image.png"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Rajesh Kumar",
+      "designation": "Founder, SpiceCraft Restaurant",
+      "quote": "HariMarkify helped us understand digital marketing clearly and improved our online presence. Our table bookings and walk-ins grew 3X in under 3 months.",
+      "rating": 5
+    },
+    {
+      "name": "Sneha Reddy",
+      "designation": "Marketing Director, Landmark Estates",
+      "quote": "Their SEO and social media strategy gave our brand a more professional look. The Meta Ads lead quality was exceptionally high, leading to immediate sales.",
+      "rating": 5
+    },
+    {
+      "name": "Amit Sharma",
+      "designation": "Director, Apex Academy",
+      "quote": "The team focused on real business growth, not just posting content. Our organic enquiries have now overtaken our paid ad leads.",
+      "rating": 5
+    },
+    {
+      "name": "Dr. V. Prasad",
+      "designation": "Chief Surgeon, Prasad Spine Care",
+      "quote": "We received better enquiries after optimizing our Google presence. Patient trust has improved drastically due to review management.",
+      "rating": 5
+    }
+  ],
+  "pricing": [
+    {
+      "id": "starter-growth",
+      "name": "Starter Growth Plan",
+      "subtitle": "For small businesses starting their digital marketing journey.",
+      "price": "₹15,000",
+      "period": "month",
+      "features": [
+        "Google Business Profile Setup & Optimization",
+        "5 Target Keywords SEO Tracking",
+        "Social Media Management (2 Platforms)",
+        "8 Creative Posts / Month",
+        "Basic WhatsApp Setup",
+        "Email & Call Support",
+        "Monthly Progress Report"
+      ],
+      "popular": false
+    },
+    {
+      "id": "business-growth",
+      "name": "Business Growth Plan",
+      "subtitle": "For growing brands that need SEO, social media, and ads.",
+      "price": "₹35,000",
+      "period": "month",
+      "features": [
+        "Advanced SEO (15 Target Keywords)",
+        "Local Citations & Competitor Mapping",
+        "Social Media Management (3 Platforms)",
+        "15 Creative Posts + 4 Reels/Shorts",
+        "Meta Ads Setup & Daily Optimization",
+        "Lead Funnel Planning & Landing Page",
+        "WhatsApp Automation (Auto-reply flow)",
+        "Bi-weekly Performance Review"
+      ],
+      "popular": true
+    },
+    {
+      "id": "performance-growth",
+      "name": "Performance Growth Plan",
+      "subtitle": "For serious businesses needing full-funnel lead generation and scaling.",
+      "price": "Custom Pricing",
+      "period": "custom",
+      "features": [
+        "Full-Scale SEO & Brand PR Planning",
+        "Unlimited Keyword Optimization",
+        "Meta Ads & Google PPC Management",
+        "Dedicated Content Creator (30 Posts/Month)",
+        "High-Converting Landing Pages Built",
+        "Complete Marketing Automation Flow",
+        "Online Reputation Campaign (Map Reviews)",
+        "Dedicated Account Manager",
+        "Weekly Custom Dashboard Reporting"
+      ],
+      "popular": false
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What digital marketing services do you offer?",
+      "answer": "We offer complete growth solutions including Search Engine Optimization (SEO), Local SEO, Meta Ads (Facebook/Instagram), Google Ads, Social Media Marketing, Content Creation, Branding, Website Design, and Lead Generation Funnels."
+    },
+    {
+      "question": "How long does it take to see results from SEO?",
+      "answer": "SEO is a long-term growth strategy. While minor local optimizations can show visibility improvements in 30-45 days, competitive organic keyword rankings typically take 3 to 6 months of consistent strategy."
+    },
+    {
+      "question": "Do you handle ad budgets directly?",
+      "answer": "Ad budgets (for Meta Ads or Google Ads) are paid directly to Google or Meta by the client. We charge a management fee based on campaign size and complexity."
+    },
+    {
+      "question": "Which plan is right for my local business?",
+      "answer": "For local service providers (like clinics, gyms, and restaurants), our Business Growth Plan is highly recommended because it blends Local SEO and lead-generation ads to deliver fast inquiries."
+    }
+  ],
+  "blogs": [
+    {
+      "id": "local-seo-guide-2026",
+      "title": "Ultimate Guide to Local SEO for Indian Businesses in 2026",
+      "meta_description": "Learn how to optimize your Google Business Profile and local search visibility to get 3X more local enquiries organically.",
+      "slug": "local-seo-guide-2026",
+      "featured_image": "assets/img/generated/seo_image.png",
+      "author": "Hari Prasad",
+      "category": "Local Business Growth",
+      "tags": [
+        "Local SEO",
+        "Google Maps",
+        "Lead Generation"
+      ],
+      "created_at": "2026-07-04",
+      "table_of_contents": [
+        "Introduction to Local Search in India",
+        "Optimizing Google Business Profile (GBP)",
+        "The Power of Local Citations & Reviews",
+        "Tracking Map Rankings & Conversions"
+      ],
+      "content": "<h2>Introduction to Local Search in India</h2>\n<p>With millions of Indians searching on Google Maps and Google Search every day for services 'near me', local visibility has become the lifeblood of local businesses. Whether you run a restaurant in Hyderabad or a real estate clinic in Mumbai, local SEO brings customers directly to your shop front.</p>\n\n<h2>Optimizing Google Business Profile (GBP)</h2>\n<p>Your Google Business Profile is your digital shop. To rank in the 'Google Map Pack' (the top 3 local listings), you must: <ul><li>Provide accurate name, address, and phone (NAP).</li><li>Select the correct primary category.</li><li>Publish regular updates and photos of your clinic, shop, or office.</li></ul></p>\n\n<h2>The Power of Local Citations & Reviews</h2>\n<p>Google trusts businesses that have a solid reputation. Encourage your customers to leave genuine ratings, and reply to all reviews. Local listings on sites like Justdial, Sulekha, and local business directories also boost authority.</p>\n\n<h2>Tracking Map Rankings & Conversions</h2>\n<p>Use tools like Google Business Insights to track how many calls, direction requests, and website visits you receive monthly. This helps you calculate a clear ROI on your marketing activities.</p>",
+      "faqs": [
+        {
+          "question": "What is NAP consistency in SEO?",
+          "answer": "NAP stands for Name, Address, and Phone. Consistency means these details are written exactly the same way across all websites and local directories."
+        },
+        {
+          "question": "How often should I post updates to Google Business Profile?",
+          "answer": "Posting 1 to 2 times a week keeps your profile fresh and active in Google's algorithm."
+        }
+      ]
+    }
+  ],
+  "leads": [
+    {
+      "id": "lead-1783159348495",
+      "name": "Test Lead",
+      "mobile": "9876543210",
+      "business_name": "Test Corp",
+      "service": "SEO",
+      "budget": "15k-35k",
+      "message": "Grow my business",
+      "status": "New",
+      "created_at": "2026-07-04T10:02:28.495Z"
+    }
+  ],
+  "settings": {
+    "agency_name": "HariMarkify",
+    "phone": "+91 9441745745",
+    "whatsapp": "+91 9441745745",
+    "email": "info@harimarkify.com",
+    "address": "Hyderabad, Telangana, India",
+    "admin_password_hash": "$2a$10$tM20y2vK9Y0Lw3s.i75t.O.QvS4a/5bO9j0H5z3WvA7nZcE9x9j4W"
+  },
+  "seo_metadata": {
+    "default": {
+      "title": "HariMarkify - Premium Digital Marketing & SEO Agency",
+      "description": "HariMarkify helps brands grow with SEO, Local SEO, Meta Ads, Google Ads, Branding, and conversion-focused digital marketing campaigns in India.",
+      "keywords": "Digital Marketing Agency, SEO Services, Google Ads Agency, Meta Ads Management, Local SEO, Google Business Profile, Hyderabad, India"
+    },
+    "about": {
+      "title": "About Us - HariMarkify Digital Growth Experts",
+      "description": "Learn about HariMarkify, a premium marketing agency building growth systems, organic search traffic, and performance ads for businesses."
+    },
+    "services": {
+      "title": "Digital Marketing Services - SEO, Ads & Branding | HariMarkify",
+      "description": "Explore our 13 core digital marketing services including SEO, Meta Ads, Google Ads, Local SEO, Reels Strategy, and Marketing Automation."
+    },
+    "portfolio": {
+      "title": "Case Studies & Results - HariMarkify Portfolio",
+      "description": "See how we achieved 3X business growth, reduced lead costs, and improved Google rankings for real estate, restaurants, education, and retail brands."
+    },
+    "seo_growth": {
+      "title": "SEO & Organic Growth Services | HariMarkify",
+      "description": "Be found on Google Search, Maps, AI Search, and YouTube. Discover our search visibility systems built for traffic and leads."
+    },
+    "blog": {
+      "title": "Digital Marketing Blog - Growth Insights & Tips | HariMarkify",
+      "description": "Stay updated with local SEO guides, Google Ads tips, Meta Ads strategies, and lead generation updates for growing brands."
+    },
+    "contact": {
+      "title": "Contact HariMarkify - Free Growth Consultation",
+      "description": "Get a free audit and marketing consultation. Contact our digital marketing team in Hyderabad today via call or WhatsApp."
+    }
+  }
+}

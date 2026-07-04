@@ -1,0 +1,119 @@
+<%- include('partials/meta.html') %>
+
+<body class="bg-dark text-light">
+
+    <%- include('partials/header.html') %>
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area bg-gray text-center" style="background-image: url('assets/img/generated/services_image.png'); background-size: cover; background-position: center; position: relative; padding: 100px 0;">
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); z-index:1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1 style="color: #fff; font-size: 40px; font-weight: 800;"><%= service.title %></h1>
+                    <ul class="breadcrumb" style="display: flex; justify-content: center; gap: 10px; list-style: none; padding: 0; margin-top: 15px;">
+                        <li><a href="index.html" style="color: #CDFE7D; font-weight: 600;">Home</a></li>
+                        <li style="color: #fff;">/</li>
+                        <li><a href="services.html" style="color: #CDFE7D; font-weight: 600;">Services</a></li>
+                        <li style="color: #fff;">/</li>
+                        <li style="color: #ccc;"><%= service.title %></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Services Details
+    ============================================= -->
+    <div class="services-details-area default-padding" style="background: #121212;">
+        <div class="container">
+            <div class="row">
+                <!-- Services Details Content -->
+                <div class="col-lg-8 pr-50 pr-md-15 pr-xs-15">
+                    <div style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px; padding: 40px; margin-bottom: 40px;">
+                        <div style="margin-bottom: 30px;">
+                            <i class="fas fa-check-circle" style="font-size: 50px; color: #CDFE7D;"></i>
+                        </div>
+                        <h2 style="font-size: 32px; color: #fff; font-weight: 800; margin-bottom: 20px;"><%= service.title %></h2>
+                        <p style="font-size: 1.15em; line-height: 1.8; color: #ccc;">
+                            <%= service.description %>
+                        </p>
+                        <p style="font-size: 1.1em; line-height: 1.8; color: #aaa; margin-top: 15px;">
+                            HariMarkify specializes in executing ROI-focused <%= service.title.toLowerCase() %> campaigns. We design strategic growth plans that help startups, e-commerce stores, and local companies in India build an authoritative presence and earn higher conversions.
+                        </p>
+                        <div class="mt-40">
+                            <h3 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 15px;">Our Campaign Execution Roadmap</h3>
+                            <p style="font-size: 1.05em; line-height: 1.8; color: #ccc;">
+                                In order to deliver consistent ROI, we execute campaigns in standard phases. First, we perform an in-depth audit of your existing channels, competitor tactics, and search intent mappings. Second, we implement conversion tracking parameters, set up custom landing grids, and refine direct call CTAs. Finally, we run continuous optimization sprints to lower acquisition costs while increasing lead quality.
+                            </p>
+                            <p style="font-size: 1.05em; line-height: 1.8; color: #aaa; margin-top: 10px;">
+                                Whether your business is targeting local Map Packs in metropolitan areas, search ranks across national keywords, or lead volume on Meta platforms, our execution methodology ensures that ad-spends are scaled only when conversion parameters are validated.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-40">
+                            <h3 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 15px;">Key Business Benefits</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 10px; font-size: 1.05em;"><i class="fas fa-check" style="color:#CDFE7D; margin-right:10px;"></i> Customized strategy built specifically for your niche</li>
+                                <li style="margin-bottom: 10px; font-size: 1.05em;"><i class="fas fa-check" style="color:#CDFE7D; margin-right:10px;"></i> Complete tracking, competitor mapping, and data optimization</li>
+                                <li style="margin-bottom: 10px; font-size: 1.05em;"><i class="fas fa-check" style="color:#CDFE7D; margin-right:10px;"></i> Transparent, detail-oriented monthly reporting</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-40" style="background: #2b2b2b; padding: 30px; border-radius: 8px; border-left: 5px solid #CDFE7D;">
+                            <h4 style="color:#fff; font-weight: 700; margin-bottom: 10px;">Get a free custom audit for your business</h4>
+                            <p style="color:#ccc; font-size:0.95em;">Let us review your brand visibility, competitor ranks, and current ad campaigns. We will share a tailored action plan.</p>
+                            <a class="btn-style-one mt-15" href="contact-us.html">
+                                <div class="icon">
+                                    <svg fill="none" height="18" viewbox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 17L17 1H7.8" stroke="#232323" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                                <span>Get Free Audit</span>
+                                <div class="icon">
+                                    <svg fill="none" height="18" viewbox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 17L17 1H7.8" stroke="#232323" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Services Sidebar -->
+                <div class="col-lg-4 mt-md-50">
+                    <div style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px; padding: 30px;">
+                        <h4 style="color: #fff; font-weight: 700; border-bottom: 1px solid #2d2d2d; padding-bottom: 15px; margin-bottom: 20px;">All Services</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <% services.forEach(function(s) { %>
+                            <li style="margin-bottom: 10px;">
+                                <a href="services-details.html?id=<%= s.id %>" style="display: block; padding: 12px 15px; border-radius: 6px; background: <%= s.id === service.id ? '#CDFE7D' : '#2b2b2b' %>; color: #fff; font-weight: 600; transition: 0.3s;">
+                                    <%= s.title %> <i class="fas fa-chevron-right" style="float: right; margin-top: 4px;"></i>
+                                </a>
+                            </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-30" style="background: linear-gradient(135deg, #CDFE7D, #ff2a00); border-radius: 12px; padding: 40px 30px; text-align: center; color: #fff;">
+                        <i class="fab fa-whatsapp" style="font-size: 50px; margin-bottom: 20px;"></i>
+                        <h4 style="font-weight: 800; font-size: 22px; color: #fff; margin-bottom: 10px;">Need Instant Help?</h4>
+                        <p style="font-size: 0.9em; opacity: 0.9; margin-bottom: 25px;">Chat with our marketing head directly on WhatsApp.</p>
+                        <a href="https://wa.me/919441745745?text=Hi%20HariMarkify%2C%20I%20have%20an%20enquiry%20regarding%20<%= encodeURIComponent(service.title) %>" target="_blank" class="btn-style-one btn-outline" style="background:#fff; border-color:#fff; color:#CDFE7D;">
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Services Details -->
+
+    <%- include('partials/footer.html') %>
+
+    <%- include('partials/scripts.html') %>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<%- include('partials/meta.html') %>
+
+<body class="bg-dark text-light">
+
+    <%- include('partials/header.html') %>
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area bg-gray text-center" style="background-image: url('assets/img/generated/contact_image.png'); background-size: cover; background-position: center; position: relative; padding: 100px 0;">
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.85); z-index:1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1 style="color: #fff; font-size: 48px; font-weight: 800;">Let's Grow Together</h1>
+                    <ul class="breadcrumb" style="display: flex; justify-content: center; gap: 10px; list-style: none; padding: 0; margin-top: 15px;">
+                        <li><a href="index.html" style="color: #CDFE7D; font-weight: 600;">Home</a></li>
+                        <li style="color: #fff;">/</li>
+                        <li style="color: #ccc;">Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Contact Us
+    ============================================= -->
+    <div class="contact-style-one-area default-padding" style="background: #121212;">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Info Sidebar -->
+                <div class="col-lg-4 pr-50 pr-md-15 pr-xs-15">
+                    <div style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px; padding: 40px 30px;">
+                        <h4 style="color: #fff; font-weight: 700; margin-bottom: 25px;">Get In Touch</h4>
+                        
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 30px; display: flex; align-items: flex-start;">
+                                <i class="fab fa-whatsapp" style="font-size: 24px; color: #CDFE7D; margin-right: 15px; margin-top: 4px;"></i>
+                                <div>
+                                    <span style="display: block; font-size: 0.85em; opacity: 0.7; margin-bottom: 2px;">Phone / WhatsApp</span>
+                                    <strong><a href="tel:<%= settings.phone || '+919441745745' %>" style="color:#fff; font-size: 1.15em;"><%= settings.phone || '+91 9441745745' %></a></strong>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 30px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-envelope" style="font-size: 20px; color: #CDFE7D; margin-right: 15px; margin-top: 4px;"></i>
+                                <div>
+                                    <span style="display: block; font-size: 0.85em; opacity: 0.7; margin-bottom: 2px;">Email Support</span>
+                                    <strong><a href="mailto:<%= settings.email || 'info@harimarkify.com' %>" style="color:#fff; font-size: 1.15em;"><%= settings.email || 'info@harimarkify.com' %></a></strong>
+                                </div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start;">
+                                <i class="fas fa-map-marker-alt" style="font-size: 22px; color: #CDFE7D; margin-right: 15px; margin-top: 4px;"></i>
+                                <div>
+                                    <span style="display: block; font-size: 0.85em; opacity: 0.7; margin-bottom: 2px;">Office Address</span>
+                                    <strong style="color: #fff; font-size: 1.1em; line-height: 1.5;"><%= settings.address || 'Hyderabad, Telangana, India' %></strong>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-40 text-center" style="background: #2b2b2b; padding: 25px; border-radius: 8px;">
+                            <h5 style="color:#fff; font-weight: 700; margin-bottom: 10px;">Quick Chat</h5>
+                            <p style="color:#ccc; font-size: 0.85em; margin-bottom: 20px;">Send a message to our marketing team instantly.</p>
+                            <a href="https://wa.me/919441745745?text=Hi%20HariMarkify%2C%20I%20need%20digital%20marketing%20services%20for%20my%20business." target="_blank" class="btn-style-one w-100 text-center" style="display:block;">
+                                <span>WhatsApp Now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-8 mt-md-50">
+                    <div style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px; padding: 40px;">
+                        <h3 style="color:#fff; font-weight: 800; font-size: 28px; margin-bottom: 10px;">Request a Free Consultation</h3>
+                        <p style="color:#ccc; margin-bottom: 30px;">Fill out the form below and our strategy head will contact you within 24 hours.</p>
+                        
+                        <div id="contact-alert" class="alert d-none" role="alert"></div>
+
+                        <form id="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-20">
+                                    <label class="form-label" style="color: #fff; font-weight:600; margin-bottom:8px;">Full Name *</label>
+                                    <input type="text" name="name" class="form-control" placeholder="Enter your name" required style="background: #2b2b2b; border: 1px solid #3d3d3d; color: #fff; padding: 12px 15px; border-radius: 6px; box-shadow: none;"/>
+                                </div>
+                                <div class="col-md-6 mb-20">
+                                    <label class="form-label" style="color: #fff; font-weight:600; margin-bottom:8px;">Mobile Number *</label>
+                                    <input type="tel" name="mobile" class="form-control" placeholder="Enter mobile number" required style="background: #2b2b2b; border: 1px solid #3d3d3d; color: #fff; padding: 12px 15px; border-radius: 6px; box-shadow: none;"/>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-20">
+                                    <label class="form-label" style="color: #fff; font-weight:600; margin-bottom:8px;">Business / Company Name</label>
+                                    <input type="text" name="business_name" class="form-control" placeholder="Enter company name" style="background: #2b2b2b; border: 1px solid #3d3d3d; color: #fff; padding: 12px 15px; border-radius: 6px; box-shadow: none;"/>
+                                </div>
+                                <div class="col-md-6 mb-20">
+                                    <label class="form-label" style="color: #fff; font-weight:600; margin-bottom:8px;">Service Required *</label>
+                                    <select name="service" class="form-control" required style="background: #2b2b2b; border: 1px solid #3d3d3d; color: #fff; padding: 12px 15px; border-radius: 6px; box-shadow: none; height: auto;">
+                                        <option value="" disabled selected>Select a Service</option>
+                                        <option value="Search Engine Optimization">Search Engine Optimization</option>
+                                        <option value="Local SEO & Google Business Profile">Local SEO &amp; Google Maps</option>
+                                        <option value="Social Media Marketing">Social Media Marketing</option>
+                                        <option value="Meta Ads Management">Meta Ads (FB/IG)</option>
+                                        <option value="Google Ads / PPC Campaigns">Google Ads / PPC</option>
+                                        <option value="Content Marketing">Content Marketing</option>
+                                        <option value="Branding & Creative Design">Branding &amp; Creative</option>
+                                        <option value="Website Design & Landing Pages">Website / Landing Page</option>
+                                        <option value="Lead Generation Campaigns">Lead Generation Funnels</option>
+                                        <option value="YouTube & Reels Strategy">YouTube / Reels Growth</option>
+                                        <option value="Online Reputation Management">Online Reputation (ORM)</option>
+                                        <option value="Marketing Automation">Marketing Automation</option>
+                                        <option value="Analytics & Monthly Reporting">Analytics &amp; Reporting</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-20">
+                                <label class="form-label" style="color: #fff; font-weight:600; margin-bottom:8px;">Monthly Marketing Budget Range</label>
+                                <select name="budget" class="form-control" style="background: #2b2b2b; border: 1px solid #3d3d3d; color: #fff; padding: 12px 15px; border-radius: 6px; box-shadow: none; height: auto;">
+                                    <option value="Under ₹15,000">Under ₹15,000 / month</option>
+                                    <option value="₹15,000 - ₹35,000" selected>₹15,000 - ₹35,000 / month</option>
+                                    <option value="₹35,000 - ₹75,000">₹35,000 - ₹75,000 / month</option>
+                                    <option value="Above ₹75,000">Above ₹75,000 / month</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-30">
+                                <label class="form-label" style="color: #fff; font-weight:600; margin-bottom:8px;">Your Message / Growth Goals</label>
+                                <textarea name="message" class="form-control" rows="4" placeholder="Tell us about your business goals and what you want to achieve" style="background: #2b2b2b; border: 1px solid #3d3d3d; color: #fff; padding: 12px 15px; border-radius: 6px; box-shadow: none; resize: none;"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-style-one border-0">
+                                <div class="icon">
+                                    <svg fill="none" height="18" viewbox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 17L17 1H7.8" stroke="#232323" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                                <span>Submit Growth Request</span>
+                                <div class="icon">
+                                    <svg fill="none" height="18" viewbox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 17L17 1H7.8" stroke="#232323" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Us -->
+
+    <%- include('partials/footer.html') %>
+
+    <%- include('partials/scripts.html') %>
+
+    <!-- Contact Form AJAX Submission script -->
+    <script>
+        $(document).ready(function() {
+            $('#contact-form').on('submit', function(e) {
+                e.preventDefault();
+                var formData = {
+                    name: $('input[name="name"]').val(),
+                    mobile: $('input[name="mobile"]').val(),
+                    business_name: $('input[name="business_name"]').val(),
+                    service: $('select[name="service"]').val(),
+                    budget: $('select[name="budget"]').val(),
+                    message: $('textarea[name="message"]').val()
+                };
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/api/contact',
+                    data: JSON.stringify(formData),
+                    contentType: 'application/json',
+                    success: function(response) {
+                        $('#contact-alert')
+                            .removeClass('d-none alert-danger')
+                            .addClass('alert-success')
+                            .text(response.message);
+                        $('#contact-form')[0].reset();
+                    },
+                    error: function(xhr) {
+                        var errorMsg = 'An error occurred. Please try again.';
+                        if(xhr.responseJSON && xhr.responseJSON.error) {
+                            errorMsg = xhr.responseJSON.error;
+                        }
+                        $('#contact-alert')
+                            .removeClass('d-none alert-success')
+                            .addClass('alert-danger')
+                            .text(errorMsg);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

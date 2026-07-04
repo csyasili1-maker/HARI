@@ -1,0 +1,116 @@
+<%- include('partials/meta.html') %>
+
+<body class="bg-dark text-light">
+
+    <%- include('partials/header.html') %>
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area bg-gray text-center" style="background-image: url('assets/img/generated/social_media_image.png'); background-size: cover; background-position: center; position: relative; padding: 100px 0;">
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.85); z-index:1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1 style="color: #fff; font-size: 48px; font-weight: 800;">Marketing Insights &amp; Blogs</h1>
+                    <ul class="breadcrumb" style="display: flex; justify-content: center; gap: 10px; list-style: none; padding: 0; margin-top: 15px;">
+                        <li><a href="index.html" style="color: #CDFE7D; font-weight: 600;">Home</a></li>
+                        <li style="color: #fff;">/</li>
+                        <li style="color: #ccc;">Blog</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Blog
+    ============================================= -->
+    <div class="blog-area default-padding" style="background: #121212;">
+        <div class="container">
+            <div class="row">
+                <!-- Blog Items -->
+                <div class="col-lg-8 pr-50 pr-md-15 pr-xs-15">
+                    <% if(blogs && blogs.length > 0) { %>
+                        <% blogs.forEach(function(blog) { %>
+                        <div style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px; overflow: hidden; margin-bottom: 40px;">
+                            <img alt="<%= blog.title %>" src="<%= blog.featured_image %>" style="width: 100%; height: 350px; object-fit: cover; border-bottom: 1px solid #2d2d2d;"/>
+                            <div style="padding: 40px;">
+                                <div style="display: flex; gap: 15px; font-size: 0.85em; opacity: 0.7; margin-bottom: 15px;">
+                                    <span><i class="fas fa-user" style="color: #CDFE7D; margin-right: 5px;"></i> By <%= blog.author %></span>
+                                    <span><i class="fas fa-calendar-alt" style="color: #CDFE7D; margin-right: 5px;"></i> <%= blog.created_at %></span>
+                                    <span><i class="fas fa-folder" style="color: #CDFE7D; margin-right: 5px;"></i> <%= blog.category %></span>
+                                </div>
+                                <h2 style="font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 15px;"><a href="blog-single.html?slug=<%= blog.slug %>" style="color:#fff;"><%= blog.title %></a></h2>
+                                <p style="font-size: 1.05em; line-height: 1.7; color: #ccc; margin-bottom: 25px;">
+                                    <%= blog.meta_description %>
+                                </p>
+                                <a class="btn-style-one" href="blog-single.html?slug=<%= blog.slug %>">
+                                    <div class="icon">
+                                        <svg fill="none" height="18" viewbox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 17L17 1H7.8" stroke="#232323" stroke-width="2"></path>
+                                        </svg>
+                                    </div>
+                                    <span>Read Full Article</span>
+                                    <div class="icon">
+                                        <svg fill="none" height="18" viewbox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 17L17 1H7.8" stroke="#232323" stroke-width="2"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <% }); %>
+                    <% } else { %>
+                        <div class="text-center py-5" style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px;">
+                            <i class="fas fa-newspaper" style="font-size: 50px; color: #CDFE7D; margin-bottom: 20px;"></i>
+                            <h3 style="color:#fff;">No blog posts found</h3>
+                            <p style="color:#ccc;">Check back later for fresh digital marketing insights!</p>
+                        </div>
+                    <% } %>
+                </div>
+                
+                <!-- Blog Sidebar -->
+                <div class="col-lg-4 mt-md-50">
+                    <!-- Categories Widget -->
+                    <div style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+                        <h4 style="color: #fff; font-weight: 700; border-bottom: 1px solid #2d2d2d; padding-bottom: 15px; margin-bottom: 20px;">Categories</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <% 
+                            const blogCats = [...new Set(blogs.map(b => b.category))];
+                            blogCats.forEach(cat => {
+                            %>
+                            <li style="margin-bottom: 12px; border-bottom: 1px solid #2b2b2b; padding-bottom: 8px;">
+                                <a href="#" style="color: #ccc; font-weight: 600; display: block;">
+                                    <%= cat %> <span style="float: right; color: #CDFE7D;">(<%= blogs.filter(b => b.category === cat).length %>)</span>
+                                </a>
+                            </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+
+                    <!-- Tags Widget -->
+                    <div style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px; padding: 30px;">
+                        <h4 style="color: #fff; font-weight: 700; border-bottom: 1px solid #2d2d2d; padding-bottom: 15px; margin-bottom: 20px;">Tags</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <% 
+                            let allTags = [];
+                            blogs.forEach(b => { allTags = allTags.concat(b.tags); });
+                            const uniqueTags = [...new Set(allTags)];
+                            uniqueTags.forEach(tag => {
+                            %>
+                            <span style="background: #2b2b2b; color: #fff; font-size: 0.85em; padding: 5px 12px; border-radius: 4px; font-weight: 600;"><%= tag %></span>
+                            <% }); %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog -->
+
+    <%- include('partials/footer.html') %>
+
+    <%- include('partials/scripts.html') %>
+
+</body>
+</html>

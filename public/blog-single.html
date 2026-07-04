@@ -1,0 +1,173 @@
+<%- include('partials/meta.html') %>
+
+<!-- BlogPosting Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:8000/blog-single.html?slug=<%= blog.slug %>"
+  },
+  "headline": "<%= blog.title %>",
+  "description": "<%= blog.meta_description %>",
+  "image": "http://localhost:8000/<%= blog.featured_image %>",  
+  "author": {
+    "@type": "Person",
+    "name": "<%= blog.author %>"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "HariMarkify",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:8000/assets/img/logo-light.png"
+    }
+  },
+  "datePublished": "<%= blog.created_at %>"
+}
+</script>
+
+<% if (blog.faqs && blog.faqs.length > 0) { %>
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    <% blog.faqs.forEach(function(faq, idx) { %>
+    {
+      "@type": "Question",
+      "name": "<%= faq.question %>",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<%= faq.answer %>"
+      }
+    }<%= idx < blog.faqs.length - 1 ? ',' : '' %>
+    <% }); %>
+  ]
+}
+</script>
+<% } %>
+
+<body class="bg-dark text-light">
+
+    <%- include('partials/header.html') %>
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area bg-gray text-center" style="background-image: url('<%= blog.featured_image %>'); background-size: cover; background-position: center; position: relative; padding: 100px 0;">
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.85); z-index:1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <span style="background: #CDFE7D; color:#fff; font-size: 0.85em; font-weight:600; padding: 5px 15px; border-radius: 4px;"><%= blog.category %></span>
+                    <h1 style="color: #fff; font-size: 40px; font-weight: 800; margin-top: 20px;"><%= blog.title %></h1>
+                    <ul class="breadcrumb" style="display: flex; justify-content: center; gap: 10px; list-style: none; padding: 0; margin-top: 15px;">
+                        <li><a href="index.html" style="color: #CDFE7D; font-weight: 600;">Home</a></li>
+                        <li style="color: #fff;">/</li>
+                        <li><a href="blog-standard.html" style="color: #CDFE7D; font-weight: 600;">Blog</a></li>
+                        <li style="color: #fff;">/</li>
+                        <li style="color: #ccc;">Article Details</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Blog Single
+    ============================================= -->
+    <div class="blog-details-area default-padding" style="background: #121212;">
+        <div class="container">
+            <div class="row">
+                <!-- Blog Content -->
+                <div class="col-lg-8 pr-50 pr-md-15 pr-xs-15">
+                    <div style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px; overflow: hidden; padding: 40px; margin-bottom: 40px;">
+                        
+                        <!-- Table of Contents -->
+                        <% if(blog.table_of_contents && blog.table_of_contents.length > 0) { %>
+                        <div style="background: #2b2b2b; padding: 25px; border-radius: 8px; margin-bottom: 40px; border-left: 5px solid #CDFE7D;">
+                            <h4 style="color:#fff; font-weight: 700; margin-bottom: 15px;"><i class="fas fa-list" style="margin-right: 10px;"></i> Table of Contents</h4>
+                            <ul style="padding-left: 20px; margin: 0; line-height: 1.8;">
+                                <% blog.table_of_contents.forEach(function(item) { %>
+                                <li><a href="#<%= item.toLowerCase().replace(/[^a-z0-9]+/g, '-') %>" style="color: #ccc; font-weight: 600;"><%= item %></a></li>
+                                <% }); %>
+                            </ul>
+                        </div>
+                        <% } %>
+
+                        <!-- Main Content HTML -->
+                        <div class="blog-main-content" style="font-size: 1.1em; line-height: 1.8; color: #ccc;">
+                            <%- blog.content %>
+                        </div>
+                        
+                        <!-- Tags display -->
+                        <div class="mt-40 pt-30" style="border-top: 1px solid #2d2d2d;">
+                            <strong>Tags: </strong>
+                            <% blog.tags.forEach(function(tag) { %>
+                            <span style="background: #2b2b2b; color: #fff; font-size: 0.85em; padding: 5px 12px; border-radius: 4px; font-weight: 600; margin-left: 5px;"><%= tag %></span>
+                            <% }); %>
+                        </div>
+
+                        <!-- FAQ Accordion section -->
+                        <% if(blog.faqs && blog.faqs.length > 0) { %>
+                        <div class="mt-50">
+                            <h3 style="color:#fff; font-weight:800; font-size:24px; margin-bottom: 25px;">Frequently Asked Questions</h3>
+                            <div class="accordion" id="faqAccordion">
+                                <% blog.faqs.forEach(function(faq, idx) { %>
+                                <div class="accordion-item" style="background: #2b2b2b; border: 1px solid #3d3d3d; border-radius: 8px; margin-bottom: 15px; overflow: hidden;">
+                                    <h2 class="accordion-header" id="heading<%= idx %>">
+                                        <button class="accordion-button <%= idx !== 0 ? 'collapsed' : '' %>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= idx %>" aria-expanded="<%= idx === 0 ? 'true' : 'false' %>" aria-controls="collapse<%= idx %>" style="background: #2b2b2b; color: #fff; font-weight: 700; border: none; padding: 20px; width: 100%; text-align: left; display: flex; justify-content: space-between; align-items: center; box-shadow: none;">
+                                            <%= faq.question %>
+                                        </button>
+                                    </h2>
+                                    <div id="collapse<%= idx %>" class="accordion-collapse collapse <%= idx === 0 ? 'show' : '' %>" aria-labelledby="heading<%= idx %>" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body" style="padding: 20px; color: #ccc; border-top: 1px solid #3d3d3d;">
+                                            <%= faq.answer %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }); %>
+                            </div>
+                        </div>
+                        <% } %>
+
+                    </div>
+                </div>
+                
+                <!-- Blog Sidebar -->
+                <div class="col-lg-4 mt-md-50">
+                    <div style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+                        <h4 style="color: #fff; font-weight: 700; border-bottom: 1px solid #2d2d2d; padding-bottom: 15px; margin-bottom: 20px;">Other Articles</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <% blogs.forEach(function(b) { %>
+                            <li style="margin-bottom: 10px;">
+                                <a href="blog-single.html?slug=<%= b.slug %>" style="display: block; padding: 12px 15px; border-radius: 6px; background: <%= b.slug === blog.slug ? '#CDFE7D' : '#2b2b2b' %>; color: #fff; font-weight: 600; transition: 0.3s; font-size: 0.9em;">
+                                    <%= b.title.slice(0, 45) %>... <i class="fas fa-chevron-right" style="float: right; margin-top: 4px;"></i>
+                                </a>
+                            </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #CDFE7D, #ff2a00); border-radius: 12px; padding: 40px 30px; text-align: center; color: #fff;">
+                        <i class="fab fa-whatsapp" style="font-size: 50px; margin-bottom: 20px;"></i>
+                        <h4 style="font-weight: 800; font-size: 22px; color: #fff; margin-bottom: 10px;">Grow Your Brand!</h4>
+                        <p style="font-size: 0.9em; opacity: 0.9; margin-bottom: 25px;">Connect with our SEO consultants on WhatsApp today.</p>
+                        <a href="https://wa.me/919441745745?text=Hi%20HariMarkify%2C%20I%20read%20your%20article%20on%20<%= encodeURIComponent(blog.title) %>%20and%20want%20to%20learn%20more." target="_blank" class="btn-style-one btn-outline" style="background:#fff; border-color:#fff; color:#CDFE7D;">
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog Single -->
+
+    <%- include('partials/footer.html') %>
+
+    <%- include('partials/scripts.html') %>
+
+</body>
+</html>

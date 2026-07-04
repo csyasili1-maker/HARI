@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'validFonts';
+  src: url('../fonts/validthemes-icon.eot?66198821');
+  src: url('../fonts/validthemes-icon.eot?66198821#iefix') format('embedded-opentype'),
+       url('../fonts/validthemes-icon.woff2?66198821') format('woff2'),
+       url('../fonts/validthemes-icon.woff?66198821') format('woff'),
+       url('../fonts/validthemes-icon.ttf?66198821') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "validFonts";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-star:before { content: '\e809'; } /* '' */
+.icon-star-2:before { content: '\e80d'; } /* '' */
+.icon-star-3:before { content: '\e804'; } /* '' */
+.icon-star-4:before { content: '\e805'; } /* '' */
+.icon-star-5:before { content: '\e80b'; } /* '' */
+.icon-quote:before { content: '\e80c'; } /* '' */
+.icon-quote-2:before { content: '\e801'; } /* '' */
+.icon-user:before { content: '\e808'; } /* '' */
+.icon-twitter-x:before { content: '\e807'; } /* '' */
+

@@ -1,0 +1,122 @@
+<%- include('partials/meta.html') %>
+
+<body class="bg-dark text-light">
+
+    <%- include('partials/header.html') %>
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area bg-gray text-center" style="background-image: url('<%= project.thumbnail %>'); background-size: cover; background-position: center; position: relative; padding: 100px 0;">
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.85); z-index:1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1 style="color: #fff; font-size: 40px; font-weight: 800;"><%= project.client %></h1>
+                    <ul class="breadcrumb" style="display: flex; justify-content: center; gap: 10px; list-style: none; padding: 0; margin-top: 15px;">
+                        <li><a href="index.html" style="color: #CDFE7D; font-weight: 600;">Home</a></li>
+                        <li style="color: #fff;">/</li>
+                        <li><a href="project.html" style="color: #CDFE7D; font-weight: 600;">Portfolio</a></li>
+                        <li style="color: #fff;">/</li>
+                        <li style="color: #ccc;">Case Study Details</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Portfolio Details
+    ============================================= -->
+    <div class="portfolio-details-area default-padding" style="background: #121212;">
+        <div class="container">
+            <div class="row">
+                <!-- Case Study Details Content -->
+                <div class="col-lg-8 pr-50 pr-md-15 pr-xs-15">
+                    <div style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px; overflow: hidden; margin-bottom: 40px;">
+                        <img alt="<%= project.client %>" src="<%= project.thumbnail %>" style="width: 100%; height: 400px; object-fit: cover; border-bottom: 1px solid #2d2d2d;"/>
+                        
+                        <div style="padding: 40px;">
+                            <div class="row mb-40" style="background: #2b2b2b; padding: 25px; border-radius: 8px; border-top: 4px solid #CDFE7D;">
+                                <div class="col-md-4 mb-sm-20">
+                                    <h5 style="color: #CDFE7D; font-weight: 700; margin-bottom: 5px;">Client / Project</h5>
+                                    <strong style="color: #fff;"><%= project.client %></strong>
+                                </div>
+                                <div class="col-md-4 mb-sm-20">
+                                    <h5 style="color: #CDFE7D; font-weight: 700; margin-bottom: 5px;">Industry</h5>
+                                    <strong style="color: #fff;"><%= project.industry %></strong>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5 style="color: #CDFE7D; font-weight: 700; margin-bottom: 5px;">Services Used</h5>
+                                    <strong style="color: #fff;"><%= project.service %></strong>
+                                </div>
+                            </div>
+                            
+                            <h3 style="color: #fff; font-size: 26px; font-weight: 800; margin-bottom: 15px;">The Business Challenge</h3>
+                            <p style="font-size: 1.1em; line-height: 1.8; color: #ccc; margin-bottom: 30px;">
+                                <%= project.challenge %>
+                            </p>
+                            
+                            <h3 style="color: #fff; font-size: 26px; font-weight: 800; margin-bottom: 15px;">Our Growth Strategy</h3>
+                            <p style="font-size: 1.1em; line-height: 1.8; color: #ccc; margin-bottom: 30px;">
+                                <%= project.strategy %>
+                            </p>
+                            
+                            <h3 style="color: #fff; font-size: 26px; font-weight: 800; margin-bottom: 15px;">Campaign Results &amp; ROI</h3>
+                            <p style="font-size: 1.15em; line-height: 1.8; color: #CDFE7D; font-weight: 600; margin-bottom: 30px;">
+                                <%= project.result %>
+                            </p>
+                            
+                            <!-- Before/After Metrics Grid -->
+                            <div class="row mt-40 pt-30" style="border-top: 1px solid #2d2d2d;">
+                                <div class="col-md-6 mb-sm-20">
+                                    <div style="background: rgba(231, 76, 60, 0.1); border: 1px solid rgba(231, 76, 60, 0.2); padding: 25px; border-radius: 8px; text-align: center;">
+                                        <h5 style="color: #e74c3c; font-weight: 700; margin-bottom: 10px;">Before HariMarkify</h5>
+                                        <span style="font-size: 1.4em; font-weight: 800; color: #fff;"><%= project.metrics_before %></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="background: rgba(46, 204, 113, 0.1); border: 1px solid rgba(46, 204, 113, 0.2); padding: 25px; border-radius: 8px; text-align: center;">
+                                        <h5 style="color: #2ecc71; font-weight: 700; margin-bottom: 10px;">After &amp; Current Results</h5>
+                                        <span style="font-size: 1.4em; font-weight: 800; color: #fff;"><%= project.metrics_after %></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Sidebar -->
+                <div class="col-lg-4 mt-md-50">
+                    <div style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px; padding: 30px;">
+                        <h4 style="color: #fff; font-weight: 700; border-bottom: 1px solid #2d2d2d; padding-bottom: 15px; margin-bottom: 20px;">Other Case Studies</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <% portfolio.forEach(function(p) { %>
+                            <li style="margin-bottom: 10px;">
+                                <a href="project-details.html?id=<%= p.id %>" style="display: block; padding: 12px 15px; border-radius: 6px; background: <%= p.id === project.id ? '#CDFE7D' : '#2b2b2b' %>; color: #fff; font-weight: 600; transition: 0.3s; font-size: 0.95em;">
+                                    <%= p.client %> <i class="fas fa-chevron-right" style="float: right; margin-top: 4px;"></i>
+                                </a>
+                            </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-30" style="background: linear-gradient(135deg, #CDFE7D, #ff2a00); border-radius: 12px; padding: 40px 30px; text-align: center; color: #fff;">
+                        <i class="fab fa-whatsapp" style="font-size: 50px; margin-bottom: 20px;"></i>
+                        <h4 style="font-weight: 800; font-size: 22px; color: #fff; margin-bottom: 10px;">Grow Your Business!</h4>
+                        <p style="font-size: 0.9em; opacity: 0.9; margin-bottom: 25px;">Let us replicate these results for your business.</p>
+                        <a href="https://wa.me/919441745745?text=Hi%20HariMarkify%2C%20I%20saw%20your%20case%20study%20on%20<%= encodeURIComponent(project.client) %>%20and%20want%20similar%20growth." target="_blank" class="btn-style-one btn-outline" style="background:#fff; border-color:#fff; color:#CDFE7D;">
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio Details -->
+
+    <%- include('partials/footer.html') %>
+
+    <%- include('partials/scripts.html') %>
+
+</body>
+</html>

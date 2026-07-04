@@ -1,0 +1,157 @@
+<!-- Start Preloader -->
+<div id="preloader">
+    <div class="rynox-loader-inner">
+        <div class="rynox-loader">
+            <span class="rynox-loader-item"></span>
+            <span class="rynox-loader-item"></span>
+            <span class="rynox-loader-item"></span>
+            <span class="rynox-loader-item"></span>
+            <span class="rynox-loader-item"></span>
+            <span class="rynox-loader-item"></span>
+            <span class="rynox-loader-item"></span>
+            <span class="rynox-loader-item"></span>
+        </div>
+    </div>
+</div>
+<!-- preloader end -->
+
+<!-- Header -->
+<header>
+    <!-- Start Navigation -->
+    <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs nav-full-width navbar-fixed">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <span class="brand-text" style="font-size: 24px; font-weight: 800; color: #fff; letter-spacing: 1px;">HARI<span style="color: #CDFE7D;">MARKIFY</span></span>
+                </a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <div class="center-info">
+                    <p>Email: <a href="mailto:<%= settings.email || 'info@harimarkify.com' %>"><%= settings.email || 'info@harimarkify.com' %></a></p>
+                </div>
+            </div>
+
+            <div class="attr-right">
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav flex">
+                    <ul>
+                        <li class="side-menu">
+                            <a href="#">
+                                <strong>MENU </strong>
+                                <div class="line">
+                                    <span class="bar-1"></span>
+                                    <span class="bar-2"></span>
+                                    <span class="bar-3"></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn-style-one btn-sm" href="contact-us.html">
+                                <div class="icon">
+                                    <svg fill="none" height="18" viewbox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 17L17 1H7.8" stroke="#232323" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                                <span>Let's Talk</span>
+                                <div class="icon">
+                                    <svg fill="none" height="18" viewbox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 17L17 1H7.8" stroke="#232323" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Atribute Navigation -->
+
+                <!-- Start Side Menu -->
+                <div class="side">
+                    <a class="close-side" href="#">Close <i class="fas fa-times"></i></a>
+                    <div class="container full-nav-attr-logo">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="widget">
+                                    <div class="logo">
+                                        <span class="brand-text" style="font-size: 24px; font-weight: 800; color: #fff; letter-spacing: 1px;">HARI<span style="color: #CDFE7D;">MARKIFY</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-7 col-lg-7">
+                                <div class="side-navbar-inner">
+                                    <div class="simple-menu">
+                                        <ul class="simple-menu-list">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="services.html">Services</a></li>
+                                            <li><a href="seo-growth.html">SEO &amp; Growth</a></li>
+                                            <li><a href="contact-us.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 offset-xl-1 col-lg-4 offset-lg-1">
+                                <div class="side-widgets">
+                                    <div class="widget address">
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <div class="content">
+                                                        <p>Address</p>
+                                                        <strong><%= settings.address || 'Hyderabad, Telangana, India' %></strong>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="content">
+                                                        <p>Email</p>
+                                                        <strong><a href="mailto:<%= settings.email || 'info@harimarkify.com' %>" style="color:inherit;"><%= settings.email || 'info@harimarkify.com' %></a></strong>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="content">
+                                                        <p>Contact / WhatsApp</p>
+                                                        <strong><a href="tel:<%= settings.phone || '+919441745745' %>" style="color:inherit;"><%= settings.phone || '+91 9441745745' %></a></strong>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="widget social">
+                                        <ul class="link">
+                                            <li>
+                                                <a href="https://wa.me/919441745745?text=Hi%20HariMarkify%2C%20I%20want%20to%20grow%20my%20business%20with%20digital%20marketing." target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Side Menu -->
+            </div>
+            <!-- Main Nav -->
+        </div>
+        <!-- Overlay screen for menu -->
+        <div class="overlay-screen"></div>
+        <!-- End Overlay screen for menu -->
+    </nav>
+    <!-- End Navigation -->
+</header>
+<!-- End Header -->

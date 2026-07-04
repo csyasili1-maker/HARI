@@ -1,0 +1,100 @@
+<%- include('partials/meta.html') %>
+
+<body class="bg-dark text-light">
+
+    <%- include('partials/header.html') %>
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area bg-gray text-center" style="background-image: url('assets/img/generated/portfolio_image.png'); background-size: cover; background-position: center; position: relative; padding: 100px 0;">
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); z-index:1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1 style="color: #fff; font-size: 48px; font-weight: 800;">Our Case Studies</h1>
+                    <ul class="breadcrumb" style="display: flex; justify-content: center; gap: 10px; list-style: none; padding: 0; margin-top: 15px;">
+                        <li><a href="index.html" style="color: #CDFE7D; font-weight: 600;">Home</a></li>
+                        <li style="color: #fff;">/</li>
+                        <li style="color: #ccc;">Portfolio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Portfolio
+    ============================================= -->
+    <div class="portfolio-style-one-area default-padding" style="background: #121212;">
+        <div class="container">
+            <!-- Filter Menu -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="portfolio-menu-wrap" style="margin-bottom: 40px;">
+                        <ul class="d-flex flex-wrap justify-content-center gap-2" style="list-style: none; padding: 0;">
+                            <li><button class="filter-btn active" data-filter="all" style="background: #CDFE7D; color: #fff; border: none; padding: 10px 20px; border-radius: 20px; font-weight: 600;">All Campaigns</button></li>
+                            <% 
+                            const categories = [...new Set(portfolio.map(item => item.category))];
+                            categories.forEach(cat => { 
+                            %>
+                            <li><button class="filter-btn" data-filter="<%= cat.toLowerCase().replace(/[^a-z0-9]+/g, '-') %>" style="background: #2b2b2b; color: #fff; border: none; padding: 10px 20px; border-radius: 20px; font-weight: 600; margin-left: 5px;"><%= cat %></button></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="row portfolio-items-wrap">
+                <% portfolio.forEach(function(item) { 
+                  const catClass = item.category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                %>
+                <!-- Single Item -->
+                <div class="col-lg-4 col-md-6 mb-30 portfolio-item-card" data-category="<%= catClass %>">
+                    <div style="background: #1d1d1d; border: 1px solid #2d2d2d; border-radius: 12px; overflow: hidden; height: 100%; display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s;">
+                        <div>
+                            <img alt="<%= item.client %>" src="<%= item.thumbnail %>" style="width: 100%; height: 230px; object-fit: cover; border-bottom: 1px solid #2d2d2d;"/>
+                            <div style="padding: 25px;">
+                                <span style="background: #CDFE7D; color: #fff; font-size: 0.8em; padding: 4px 10px; border-radius: 4px; font-weight: 600;"><%= item.category %></span>
+                                <h4 style="font-size: 22px; font-weight: 700; margin-top: 15px; margin-bottom: 12px;"><a href="project-details.html?id=<%= item.id %>" style="color: #fff;"><%= item.client %></a></h4>
+                                <p style="font-size: 0.95em; color: #ccc; line-height: 1.6; margin-bottom: 0;">
+                                    <strong>Result:</strong> <%= item.result %>
+                                </p>
+                            </div>
+                        </div>
+                        <div style="padding: 0 25px 25px 25px;">
+                            <a href="project-details.html?id=<%= item.id %>" style="color: #CDFE7D; font-weight: 600; font-size: 0.95em; display: inline-flex; align-items: center;">View Case Study <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <% }); %>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+
+    <%- include('partials/footer.html') %>
+
+    <%- include('partials/scripts.html') %>
+
+    <!-- Quick client side category filter script -->
+    <script>
+        $(document).ready(function() {
+            $('.filter-btn').on('click', function() {
+                $('.filter-btn').removeClass('active').css({'background': '#2b2b2b'});
+                $(this).addClass('active').css({'background': '#CDFE7D'});
+                
+                var filterValue = $(this).attr('data-filter');
+                if (filterValue === 'all') {
+                    $('.portfolio-item-card').fadeIn(300);
+                } else {
+                    $('.portfolio-item-card').hide();
+                    $('.portfolio-item-card[data-category="' + filterValue + '"]').fadeIn(300);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

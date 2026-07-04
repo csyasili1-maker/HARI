@@ -1,0 +1,185 @@
+<%- include('partials/meta.html') %>
+
+<body class="bg-light text-dark">
+
+    <%- include('partials/header.html') %>
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area bg-gray text-center" style="background-image: url('assets/img/generated/about_image.png'); background-size: cover; background-position: center; position: relative; padding: 100px 0;">
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); z-index:1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1 style="color: #fff; font-size: 48px; font-weight: 800;"><%= homepage.about_title %></h1>
+                    <ul class="breadcrumb" style="display: flex; justify-content: center; gap: 10px; list-style: none; padding: 0; margin-top: 15px;">
+                        <li><a href="index.html" style="color: #CDFE7D; font-weight: 600;">Home</a></li>
+                        <li style="color: #fff;">/</li>
+                        <li style="color: #ccc;">About Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start About 
+    ============================================= -->
+    <div class="about-style-one-area default-padding" style="background: #ffffff;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="thumb">
+                        <img alt="About HariMarkify" src="assets/img/generated/about_image.png" style="width: 100%; border-radius: 12px; border: 1px solid #e5e5e5;"/>
+                    </div>
+                </div>
+                <div class="col-lg-6 pl-50 pl-md-15 pl-xs-15 mt-md-30">
+                    <div class="about-style-one-info">
+                        <span class="sub-title" style="color: #CDFE7D; font-weight: 700; text-transform: uppercase;">GROWTH PARTNERS</span>
+                        <h2 style="font-size: 36px; font-weight: 800; color: #121212; margin-top: 10px; margin-bottom: 20px;">We Build Dynamic Marketing Growth Systems</h2>
+                        <p style="font-size: 1.15em; line-height: 1.8; color: #444;">
+                            At HariMarkify, we don’t just run campaigns — we build growth systems. From search visibility to social media presence, from paid ads to brand storytelling, we help businesses become discoverable, memorable, and profitable.
+                        </p>
+                        <p style="font-size: 1.1em; line-height: 1.8; color: #666; margin-top: 15px;">
+                            We support startups, local businesses, education brands, healthcare businesses, real estate companies, restaurants, e-commerce brands, service providers, and personal brands with smart, ROI-driven digital marketing strategies.
+                        </p>
+                        
+                        <div class="d-flex align-items-center mt-30">
+                            <a class="btn-style-one" href="https://wa.me/919441745745?text=Hi%20HariMarkify%2C%20I%20want%20to%20grow%20my%20business%20with%20digital%20marketing." target="_blank">
+                                <div class="icon">
+                                    <svg fill="none" height="18" viewbox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 17L17 1H7.8" stroke="#232323" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                                <span>WhatsApp Us</span>
+                                <div class="icon">
+                                    <svg fill="none" height="18" viewbox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 17L17 1H7.8" stroke="#232323" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                            <div style="margin-left: 30px;">
+                                <p style="font-size: 0.9em; opacity: 0.7; margin-bottom: 2px;">Call Us Directly</p>
+                                <strong><a href="tel:<%= settings.phone %>" style="color: #CDFE7D; font-size: 1.2em;"><%= settings.phone %></a></strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Strategy Blueprint
+    ============================================= -->
+    <div class="strategy-blueprint-area default-padding-bottom" style="background: #ffffff; padding-top: 40px;">
+        <div class="container" style="border-top: 1px solid #e5e5e5; padding-top: 80px;">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center mb-50">
+                    <span class="sub-title" style="color: #CDFE7D; font-weight: 700; text-transform: uppercase;">METHODOLOGY</span>
+                    <h3 style="font-size: 32px; font-weight: 800; color: #121212; margin-top: 10px;">Our 3-Step Growth Engine Blueprint</h3>
+                    <p style="color: #555; font-size: 1.1em; margin-top: 15px;">Every brand has different audiences and goals. At HariMarkify, we implement a data-centric, three-phase growth framework that takes businesses from local hidden gems to national market leaders.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-30">
+                    <div style="background: #ffffff; border: 1px solid #e5e5e5; padding: 35px; border-radius: 8px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                        <span style="font-size: 36px; font-weight: 800; color: #CDFE7D; display: block; margin-bottom: 20px;">01</span>
+                        <h4 style="color: #121212; font-size: 20px; font-weight: 700; margin-bottom: 15px;">Discovery &amp; Competitor Mapping</h4>
+                        <p style="color: #555; line-height: 1.7; font-size: 0.95em;">We begin by analyzing your competitor's organic keyword rankings, paid ad creatives, search market trends, and backlink authority. By determining the exact search demand gaps and conversion points, we establish a target list of high-intent keywords that can drive direct business inquiries from day one.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-30">
+                    <div style="background: #ffffff; border: 1px solid #e5e5e5; padding: 35px; border-radius: 8px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                        <span style="font-size: 36px; font-weight: 800; color: #CDFE7D; display: block; margin-bottom: 20px;">02</span>
+                        <h4 style="color: #121212; font-size: 20px; font-weight: 700; margin-bottom: 15px;">Conversion System Setup</h4>
+                        <p style="color: #555; line-height: 1.7; font-size: 0.95em;">No amount of traffic matters if your landing pages or map profiles don't convert visitors into leads. We optimize your website speed, implement local schema tags, build WhatsApp direct redirection funnels, set up tracking pixels, and deploy high-converting landing page layouts tailored specifically to Indian startup models.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-30">
+                    <div style="background: #ffffff; border: 1px solid #e5e5e5; padding: 35px; border-radius: 8px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                        <span style="font-size: 36px; font-weight: 800; color: #CDFE7D; display: block; margin-bottom: 20px;">03</span>
+                        <h4 style="color: #121212; font-size: 20px; font-weight: 700; margin-bottom: 15px;">Multi-Channel Scaling</h4>
+                        <p style="color: #555; line-height: 1.7; font-size: 0.95em;">Once the mapping and conversion systems are tested, we run parallel scaling engines: local SEO targeting Map Packs, organic content pipelines targeting Google search, and performance campaigns on Meta (FB/IG) &amp; Google Ads (PPC) designed to scale your ROI (average ROAS 4.5X+) while driving continuous revenue.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Strategy Blueprint -->
+
+    <!-- Start Why Choose Us -->
+    ============================================= -->
+    <div class="choose-us-style-two-area default-padding-top bg-gray shadow-shape-top">
+        <div class="container">
+            <div class="brand-heading mb-50">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-4">
+                        <div class="sub-title" style="color: #CDFE7D;">OUR CAPABILITIES</div>
+                    </div>
+                    <div class="col-xl-7 col-lg-8">
+                        <h2 class="title" style="color: #121212; font-size: 32px; font-weight: 700;">
+                            Performance Marketing &amp; SEO Strategies Built For Conversions
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container container-large pb-70">
+            <div class="row">
+                <% homepage.why_choose_us.forEach(function(point) { %>
+                <div class="col-lg-3 col-md-6 mb-30">
+                    <div style="background: #ffffff; border: 1px solid #e5e5e5; padding: 25px; border-radius: 8px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                        <i class="fas fa-check-circle" style="color: #CDFE7D; font-size: 24px; margin-bottom: 15px;"></i>
+                        <h4 style="color: #121212; font-size: 18px; font-weight: 700;"><%= point %></h4>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+    <!-- End Why Choose Us -->
+
+    <!-- Start Testimonials
+    ============================================= -->
+    <div class="testimonials-style-one-area default-padding" style="background: #ffffff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-md-8">
+                    <div class="site-heading text-center">
+                        <div class="sub-title" style="color: #CDFE7D;">REVIEWS</div>
+                        <div class="title split-text" style="color: #121212;">Client Success Stories</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-50">
+                <% testimonials.forEach(function(t) { %>
+                <div class="col-lg-6 mb-30">
+                    <div style="background: #ffffff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 30px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <p style="font-style: italic; font-size: 1.1em; line-height: 1.8; color: #555; margin-bottom: 20px;">
+                            "<%= t.quote %>"
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h5 style="color: #121212; font-weight: 700; margin-bottom: 2px;"><%= t.name %></h5>
+                                <span style="font-size: 0.85em; color: #CDFE7D;"><%= t.designation %></span>
+                            </div>
+                            <div style="color: #f39c12;">
+                                <% for(let i=0; i<t.rating; i++) { %>
+                                <i class="fas fa-star"></i>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonials -->
+
+    <%- include('partials/footer.html') %>
+
+    <%- include('partials/scripts.html') %>
+
+</body>
+</html>

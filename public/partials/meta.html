@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="<%= metaDesc %>" name="description"/>
+    <meta content="<%= keywords %>" name="keywords"/>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://localhost:8000<%= activePage %>"/>
+    <meta property="og:title" content="<%= pageTitle %>"/>
+    <meta property="og:description" content="<%= metaDesc %>"/>
+    <meta property="og:image" content="http://localhost:8000/assets/img/generated/hero_image.png"/>
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:url" content="http://localhost:8000<%= activePage %>"/>
+    <meta property="twitter:title" content="<%= pageTitle %>"/>
+    <meta property="twitter:description" content="<%= metaDesc %>"/>
+    <meta property="twitter:image" content="http://localhost:8000/assets/img/generated/hero_image.png"/>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:8000<%= activePage.replace('public/', '').replace('.html', '') %>"/>
+
+    <!-- ========== Page Title ========== -->
+    <title><%= pageTitle %></title>
+    
+    <!-- ========== Favicon Icon ========== -->
+    <link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
+    
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="assets/css/adixa-icons.css" rel="stylesheet"/>
+    <link href="assets/css/magnific-popup.css" rel="stylesheet"/>
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet"/>
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+    <link href="assets/css/validnavs.css" rel="stylesheet"/>
+    <link href="assets/css/helper.css" rel="stylesheet"/>
+    <link href="assets/css/unit-test.css" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "HariMarkify",
+      "url": "http://localhost:8000",
+      "logo": "http://localhost:8000/assets/img/logo-light.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "<%= settings.phone %>",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["en", "tel", "hi"]
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "HariMarkify",
+      "image": "http://localhost:8000/assets/img/generated/hero_image.png",
+      "@id": "http://localhost:8000/#localbusiness",
+      "url": "http://localhost:8000",
+      "telephone": "<%= settings.phone %>",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hyderabad",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 17.3850,
+        "longitude": 78.4867
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "19:00"
+      }
+    }
+    </script>
+</head>
