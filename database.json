@@ -398,6 +398,16 @@
     "contact": {
       "title": "Contact HariMarkify - Free Growth Consultation",
       "description": "Get a free audit and marketing consultation. Contact our digital marketing team in Hyderabad today via call or WhatsApp."
+    },
+    "privacy_policy": {
+      "title": "Privacy Policy - HariMarkify Digital Marketing Agency",
+      "description": "Read the privacy policy of HariMarkify. Learn how we collect, store, use, and protect your brand and customer data.",
+      "keywords": "privacy policy, data protection, digital marketing agency privacy, security terms, HariMarkify policy"
+    },
+    "terms_conditions": {
+      "title": "Terms & Conditions - HariMarkify Digital Marketing Agency",
+      "description": "Review the Terms of Service and client agreement parameters for collaborating with HariMarkify digital marketing agency.",
+      "keywords": "terms and conditions, terms of service, client contract, digital marketing service terms, HariMarkify agreement"
     }
   }
 }

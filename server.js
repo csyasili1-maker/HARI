@@ -96,7 +96,7 @@ app.get('/sitemap.xml', (req, res) => {
   res.header('Content-Type', 'application/xml');
   const db = getDb();
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
-  const urls = ['', '/about-us.html', '/services.html', '/seo-growth.html', '/contact-us.html'];
+  const urls = ['', '/about-us.html', '/services.html', '/seo-growth.html', '/contact-us.html', '/privacy-policy.html', '/terms-conditions.html'];
   urls.forEach(u => {
     xml += `  <url>\n    <loc>http://localhost:${PORT}${u}</loc>\n    <changefreq>monthly</changefreq>\n  </url>\n`;
   });
@@ -215,6 +215,28 @@ app.get(['/contact-us.html', '/contact-us-light.html'], (req, res) => {
     metaDesc: meta.description,
     keywords: db.seo_metadata.default.keywords,
     settings: db.settings
+  });
+});
+
+app.get(['/privacy-policy.html', '/privacy-policy-light.html'], (req, res) => {
+  const db = getDb();
+  const meta = db.seo_metadata.privacy_policy;
+  const isLight = req.path.includes('light');
+  res.render(isLight ? 'privacy-policy-light.html' : 'privacy-policy.html', {
+    pageTitle: meta.title,
+    metaDesc: meta.description,
+    keywords: meta.keywords
+  });
+});
+
+app.get(['/terms-conditions.html', '/terms-conditions-light.html'], (req, res) => {
+  const db = getDb();
+  const meta = db.seo_metadata.terms_conditions;
+  const isLight = req.path.includes('light');
+  res.render(isLight ? 'terms-conditions-light.html' : 'terms-conditions.html', {
+    pageTitle: meta.title,
+    metaDesc: meta.description,
+    keywords: meta.keywords
   });
 });
 
