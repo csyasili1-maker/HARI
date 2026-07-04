@@ -11,9 +11,13 @@ const PORT = 8000;
 const DB_FILE = path.join(__dirname, 'database.json');
 const UPLOAD_DIR = path.join(__dirname, 'uploads');
 
-// Ensure upload directory exists
-if (!fs.existsSync(UPLOAD_DIR)) {
-  fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+// Ensure upload directory exists safely (avoiding read-only filesystem crash on Vercel)
+try {
+  if (!fs.existsSync(UPLOAD_DIR)) {
+    fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+  }
+} catch (err) {
+  console.warn("Could not create uploads directory (expected in read-only serverless environment):", err.message);
 }
 
 // Multer configuration for file uploads

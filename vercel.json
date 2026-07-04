@@ -1,5 +1,13 @@
 {
   "version": 2,
+  "functions": {
+    "server.js": {
+      "includeFiles": [
+        "public/**",
+        "database.json"
+      ]
+    }
+  },
   "builds": [
     {
       "src": "server.js",
